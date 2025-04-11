@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinoy Recipes Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+  <!-- Header -->
+  <header class="bg-white px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold" style="color: #C23E15;">KusinaHub</h1>
+      <nav class="space-x-6 text-black font-medium">
+        <a href="#" class="hover:text-[#C23E15]">Home</a>
+        <a href="#" class="hover:text-[#C23E15]">Recipes</a>
+        <a href="#" class="hover:text-[#C23E15]">About Us</a>
+        <a href="#" class="hover:text-[#C23E15]">Contact</a>
+        <button class="inline-flex items-center justify-center w-8 h-8 bg-[#C23E15] text-white rounded-full" >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zm10-2l-4.35-4.35" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-12 px-6 bg-white">
+    <h2 class="text-4xl font-extrabold text-black mb-4">Heat Up Your Kitchen with <br>Delicious Filipino Recipes.</h2>
+    <p class="text-gray-600 mb-6 italic">Bring Flavor Home with Every Pinoy Dish!</p>
+    <button class="bg-[#C23E15] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]">MORE RECIPES</button>
+  </section>
+
+  <!-- Recipes Grid -->
+  <section class="px-6 py-10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+        <h3 class="font-bold text-2xl pt-5 flex justify-center py-7">Chicken Adobo</h3>
+        <img src="Chicken Adobo.jpg" class="rounded-full w-50 h-50 mx-auto mb-4">
+        <p class="text-sm">Chicken slices cooked in soy sauce and vinegar with garlic. 
+          This is a delicious Filipino chicken dish that you can eat for lunch with warm white rice.</p>
+        <section class="text-center py-12 px-6 bg-white">
+          <button class="bg-[#C23E15] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="openModal('chickenAdoboModal')">View Recipe</button>
+        </section>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+        <h3 class="font-bold text-2xl pt-5 flex justify-center py-7">Sinigang</h3>
+        <img src="sinigang.jpg" class="rounded-full w-50 h-50 mx-auto mb-4">
+        <p class="text-sm">Sinigang is a sour soup native to the Philippines. This recipe uses pork as the main ingredient. 
+          Other proteins and seafood can also be used. Beef, shrimp, fish are commonly used to cook sinigang.</p>
+        <section class="text-center py-12 px-6 bg-white">
+          <button class="bg-[#C23E15] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="openModal('sinigangModal')">View Recipe</button>
+        </section>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+        <h3 class="font-bold text-2xl pt-5 flex justify-center py-7">Kare-kare</h3>
+        <img src="kare kare.jpg" class="rounded-full w-50 h-50 mx-auto mb-4">
+        <p class="text-sm">Kare Kare is a traditional Filipino stew complimented with a thick savory peanut sauce. The commonly used meats for this dish are ox tail, tripe, and pork leg; on some occasions goat and chicken meat are also used. Besides the peanuts, this dish depends on the shrimp paste (on the side) in order to be fully enjoyed. 
+          Traditionally, “palayok” (clay cooking pot) is used to cook this dish and it is also used as the serving pot.</p>
+        <section class="text-center py-12 px-6 bg-white">
+          <button class="bg-[#C23E15] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="openModal('Kare-kareModal')">View Recipe</button>
+        </section>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+        <h3 class="font-bold text-2xl pt-5 flex justify-center py-7">Tinola</h3>
+        <img src="tinola.jpg" class="rounded-full w-50 h-50 mx-auto mb-4">
+        <p class="text-sm">Chicken Tinola is a Filipino soup dish. It involves cooking chicken pieces in ginger broth. It is a popular cold weather dish. I always feel warm and cozy every time I eat it. 
+          This Filipino Chicken Soup is best enjoyed with fish sauce as dipping sauce, and a cup of warm white rice.</p>
+        <section class="text-center py-12 px-6 bg-white">
+          <button class="bg-[#C23E15] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="openModal('TinolaModal')">View Recipe</button>
+        </section>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+        <h3 class="font-bold text-2xl pt-5 flex justify-center py-7">Menudo</h3>
+        <img src="menudo.jpg" class="rounded-full w-50 h-50 mx-auto mb-4">
+        <p class="text-sm">Pork Menudo is the number one on the list of my comfort foods and it’s hard for me to last a month without trying one…literally. 
+          Some would say that I am addicted to this food while others would use the term “obsession”, I just simply look at it as a necessity – a basic necessity that I cannot live without.</p>
+        <section class="text-center py-12 px-6 bg-white">
+          <button class="bg-[#C23E15] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="openModal('MenudoModal')">View Recipe</button>
+        </section>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-sm">
+        <h3 class="font-bold text-2xl pt-5 flex justify-center py-7">Bistek Tagalog</h3>
+        <img src="bistek.jpg" class="rounded-full w-50 h-50 mx-auto mb-4">
+        <p class="text-sm">Bistek Tagalog is a type of Filipino beef stew. This is also known as beef steak to some people. It is comprised of thin slices of beef and a generous amount of onions. These are stewed in a soy sauce and lemon juice mixture until the beef gets very tender. 
+          It is best enjoyed with warm rice.</p>
+        <section class="text-center py-12 px-6 bg-white">
+          <button class="bg-[#C23E15] text-white px-6 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="openModal('BistekModal')">View Recipe</button>
+        </section>
+      </div>
+
+  </section>
+
+  <!-- Adobo Modal -->
+  <div id="chickenAdoboModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full overflow-y-auto max-h-[90vh]">
+      <h2 class="text-2xl font-bold mb-4">Chicken Adobo Recipe</h2>
+      <h3 class="text-2xl font-medium mb-4">Ingredients</h3>
+        <p class="text-sm mt-2 my-5">
+          • 2 lbs chicken <br>
+          • 3 pieces dried bay leaves (note 2) <br>
+          • 4 tablespoons soy sauce (note 3) <br>
+          • 6 tablespoons white vinegar (note 4) <br>
+          • 5 cloves garlic (note 5) <br>
+          • 1 1/2 cups water <br>   
+          • 3 tablespoons cooking oil <br>
+          • 1 teaspoon sugar (note 6) <br>
+          • 1/4 teaspoon salt (note 7) <br>
+          • 1 teaspoon whole peppercorn (note 8)
+        </p>
+        <h3 class="text-2xl font-medium mb-4">Instructions</h3>
+        <p class="text-sm mt-2">
+          1. Combine chicken, soy sauce, and garlic in a large bowl. Mix well. Marinate the chicken for at least 1 hour. <br> <span class="opacity-80">• (2 lbs chicken, 4 tablespoons soy sauce)</span>
+        </p>
+        <p class="text-sm mt-2">
+          2. Heat a cooking pot. Pour cooking oil. <br> <span class="opacity-80">• (3 tablespoons cooking oil)</span>
+        </p>
+        <p class="text-sm mt-2">
+          3. When the oil is hot enough, pan-fry the marinated chicken for 2 minutes per side.
+        </p>
+        <p class="text-sm mt-2">
+          4. Pour-in the remaining marinade, including garlic. Add water. Bring to a boil <br> <span class="opacity-80">• (1 1/2 cups water)</span>
+        </p>
+        <p class="text-sm mt-2">
+          5. Add dried bay leaves and whole peppercorn. Simmer for 30 minutes or until the chicken gets tender <br> <span class="opacity-80">• (3 pieces dried bay leaves, 1 teaspoon whole peppercorn)</span>
+        </p>
+        <p class="text-sm mt-2">
+          6. Add vinegar. Stir and cook for 10 minutes. <br> <span class="opacity-80">• (6 tablespoons white vinegar)</span>
+        </p>
+        <p class="text-sm mt-2 my-10">
+          7. Put-in the sugar, and salt. Stir and turn the heat off. Serve hot. Share and Enjoy! <br> <span class="opacity-80">• (1 teaspoon sugar, 1/4 teaspoon salt)</span>
+        </p>
+
+      <button class="bg-[#C23E15] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="closeModal('chickenAdoboModal')">Close</button>
+    </div>
+  </div>
+ <!-- Sinigang Modal -->
+  <div id="sinigangModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full overflow-y-auto max-h-[90vh]">
+      <h2 class="text-2xl font-bold mb-4">Sinigang Recipe</h2>
+      <h3 class="text-2xl font-medium mb-4">Ingredients</h3>
+        <p class="text-sm mt-2 my-5">
+          • 2 lbs. pork belly <br>
+          • 1 lb. young <br>
+          • 1 bunch water spinach <br>
+          • 8 pieces string beans <br>
+          • 2 pieces eggplants <br>
+          • 1 piece daikon radish <br>   
+          • 8 pieces okras <br>
+          • 2 pieces tomatoes <br>
+          • 2 pieces long green pepper <br>
+          • 1 piece onion <br>
+          • 2 quarts water <br>
+          • Fish sauce and ground black pepper  
+        </p>
+        <h3 class="text-2xl font-medium mb-4">Instructions</h3>
+        <p class="text-sm mt-2">
+          1. Boil the young tamarind in 2 quarts of water for 40 minutes. Filter the tamarind broth using a kitchen sieve or a strainer. Squeeze the tamarind afterwards to extract its remaining juices. <br> <span class="opacity-80">• (1 lb. young tamarind, 2 quarts water)</span>
+        </p>
+        <p class="text-sm mt-2">
+          2. Pour the tamarind broth into a cooking pot. Let it boil and then add the onion, pork belly, and half the amount of the tomatoes. <br> <span class="opacity-80">• (2 lbs. pork belly, 1 piece onion, 2 pieces tomatoes)</span>
+        </p>
+        <p class="text-sm mt-2">
+          3. Skim-off the floating scums, pour 1 tablespoon fish sauce, cover and continue to simmer for 1 hour.  <br> <span class="opacity-80">• (Fish sauce and ground black pepper)</span>
+        </p>
+        <p class="text-sm mt-2">
+          4. Add daikon radish and eggplants. Cook for 5 minutes. <br> <span class="opacity-80">• (1 piece daikon radish, 2 pieces eggplants)</span>
+        </p>
+        <p class="text-sm mt-2">
+          5. Add the long green pepper, string beans, remaining tomatoes, and okra. Cook for 3 minutes. <br> <span class="opacity-80">• (8 pieces string beans, 2 pieces tomatoes, 2 pieces long green pepper, 8 pieces okras)</span>
+        </p>
+        <p class="text-sm mt-2">
+          6. Add the chopped water spinach stalks and season with fish sauce and ground black pepper. Cook for 2 minutes. <br> <span class="opacity-80">• (Fish sauce and ground black pepper)</span>
+        </p>
+        <p class="text-sm mt-2 my-10">
+          7. Put the water spinach leaves. Cover and turn the heat off. Let the residual heat cook the leaves for 3 minutes before serving. <br> <span class="opacity-80">• (1 bunch water spinach)</span>
+        </p>
+
+      <button class="bg-[#C23E15] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="closeModal('sinigangModal')">Close</button>
+    </div>
+  </div>
+ <!-- Kare-kare Modal -->
+ <div id="Kare-kareModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg p-6 max-w-md w-full overflow-y-auto max-h-[90vh]">
+    <h2 class="text-2xl font-bold mb-4">Kare-kare Recipe</h2>
+    <h3 class="text-2xl font-medium mb-4">Ingredients</h3>
+      <p class="text-sm mt-2 my-5">
+        • 3 lbs oxtail <br>
+        • 1 piece small banana flower bud <br>
+        • 1 bundle pechay or bok choy <br>
+        • 1 bundle string beans <br>
+        • 4 pieces eggplants <br>
+        • 1 cup ground peanuts <br>   
+        • 1/2 cup peanut butter <br>
+        • 1/2 cup shrimp paste <br>
+        • 34 Ounces water <br>
+        • 1/2 cup annatto seeds <br>
+        • 1/2 cup toasted ground rice <br>
+        • 1 tbsp garlic <br>
+        • salt and pepper <br>
+      </p>
+      <h3 class="text-2xl font-medium mb-4">Instructions</h3>
+      <p class="text-sm mt-2">
+        1. In a large pot, bring the water to a boil
+      </p>
+      <p class="text-sm mt-2">
+        2. Put in the oxtail followed by the onions and simmer for 2.5 to 3 hrs or until tender (35 minutes if using a pressure cooker)
+      </p>
+      <p class="text-sm mt-2">
+        3. Once the meat is tender, add the ground peanuts, peanut butter, and coloring (water from the annatto seed mixture) and simmer for 5 to 7 minutes
+      </p>
+      <p class="text-sm mt-2">
+        4. Add the toasted ground rice and simmer for 5 minutes
+      </p>
+      <p class="text-sm mt-2">
+        5. On a separate pan, saute the garlic then add the banana flower, eggplant, and string beans and cook for 5 minutes
+      </p>
+      <p class="text-sm mt-2">
+        6. Transfer the cooked vegetables to the large pot (where the rest of the ingredients are)
+      </p>
+      <p class="text-sm mt-2 my-10">
+        7. Add salt and pepper to taste
+      </p>
+
+    <button class="bg-[#C23E15] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="closeModal('Kare-kareModal')">Close</button>
+  </div>
+</div>
+<!-- Tinola Modal -->
+<div id="TinolaModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg p-6 max-w-md w-full overflow-y-auto max-h-[90vh]">
+    <h2 class="text-2xl font-bold mb-4">Tinola Recipe</h2>
+    <h3 class="text-2xl font-medium mb-4">Ingredients</h3>
+      <p class="text-sm mt-2 my-5">
+        • 3 lbs. chicken <br>
+        • 2 green papaya <br>
+        • 1 ½ cup malunggay leaves <br>
+        • 1 cup hot pepper leaves <br>
+        • 5 cloves garlic  <br>
+        • 1 onion <br>   
+        • 3 thumbs ginger <br>
+        • 2 Maggi Magic Chicken Cubes <br>
+        • 1 quart rice wash <br>
+        • 1 quart water <br>
+        • 2 tablespoons fish sauce <br>
+        • Ground black pepper to taste  <br>
+        • 3 tablespoons cooking oil
+      </p>
+      <h3 class="text-2xl font-medium mb-4">Instructions</h3>
+      <p class="text-sm mt-2">
+        1. Heat cooking oil in a cooking pot. Sauté garlic, onion, and ginger until the onion softens.
+      </p>
+      <p class="text-sm mt-2">
+        2. Add the chicken. Continue sautéing for 2 minutes or until it turns light brown in color.
+      </p>
+      <p class="text-sm mt-2">
+        3. Pour 2 tablespoons of fish sauce. Stir.
+      </p>
+      <p class="text-sm mt-2">
+        4. Add the rice wash into the cooking pot. Let it boil. Simmer for 10 minutes.
+      </p>
+      <p class="text-sm mt-2">
+        5. Add water as needed. Let it boil.
+      </p>
+      <p class="text-sm mt-2">
+        6. Put the green papaya wedges into the pot. Continue to simmer for 15 to 20 minutes.
+      </p>
+      <p class="text-sm mt-2 my-10">
+        7. Add Maggi Magic Chicken Cubes. Stir. Season with ground black pepper (this is optional). Turn off the heat and then add the hot pepper leaves and malunggay leaves into the cooking pot. Cover for 2 minutes to let the residual heat cook the green veggies.
+      </p>
+
+    <button class="bg-[#C23E15] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="closeModal('TinolaModal')">Close</button>
+  </div>
+</div>
+<!-- Menudo Modal -->
+<div id="MenudoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg p-6 max-w-md w-full overflow-y-auto max-h-[90vh]">
+    <h2 class="text-2xl font-bold mb-4">Menudo Recipe</h2>
+    <h3 class="text-2xl font-medium mb-4">Ingredients</h3>
+      <p class="text-sm mt-2 my-5">
+        • 2 lbs. pork <br>
+        • 1/4 lb. pig liver <br>
+        • 1 cup potatoes <br>
+        • 1 piece carrot <br>
+        • 1/2 cup soy sauce <br>
+        • 1/2 piece lemon <br>   
+        • 1 piece onion <br>
+        • 3 cloves garlic <br>
+        • 1 teaspoon sugar <br>
+        • 3/4 cup tomato sauce <br>
+        • 1 cup water <br>
+        • 4 pieces hotdogs <br>
+        • 2 tablespoons cooking oil <br>
+        • 2 to 3 pieces dried bay leaves <br>
+        • Salt and pepper to taste
+      </p>
+      <h3 class="text-2xl font-medium mb-4">Instructions</h3>
+      <p class="text-sm mt-2">
+        1. Combine pork, soysauce, and lemon in a bowl. Marinate for at least 1 hour.
+      </p>
+      <p class="text-sm mt-2">
+        2. Heat oil in a pan
+      </p>
+      <p class="text-sm mt-2">
+        3. Saute garlic and onion.
+      </p>
+      <p class="text-sm mt-2">
+        4. Add the marinated pork. Cook for 5 to 7 minutes. 
+      </p>
+      <p class="text-sm mt-2">
+        5. Pour in tomato sauce and water and then add the bay leaves.Let boil and simmer for 30 minutes to an hour depending on the toughness of the pork. Note: Add water as necessary.
+      </p>
+      <p class="text-sm mt-2">
+        6. Add-in the liver and hot dogs.Cook for 5 minutes.
+      </p>
+      <p class="text-sm mt-2 my-10">
+        7. Put-in potatoes, carrots, sugar,salt, and pepper. Stir and cook for 8 to 12 minutes.
+      </p>
+    <button class="bg-[#C23E15] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="closeModal('MenudoModal')">Close</button>
+  </div>
+</div>
+<!-- Bistek Modal -->
+<div id="BistekModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white rounded-lg p-6 max-w-md w-full overflow-y-auto max-h-[90vh]">
+    <h2 class="text-2xl font-bold mb-4">Bistek Tagalog Recipe</h2>
+    <h3 class="text-2xl font-medium mb-4">Ingredients</h3>
+      <p class="text-sm mt-2 my-5">
+        • 1 1/2 lbs beef sirloin <br>
+        • 5 tablespoons soy sauce <br>
+        • 4 pieces calamansi <br>
+        • 1/2 tsp ground black pepper <br>
+        • 3 cloves garlic <br>
+        • 3 pieces onion <br>   
+        • 4 tablespoons cooking oil <br>
+        • 1 cup water <br>
+        • 1 pinch salt 
+      </p>
+      <h3 class="text-2xl font-medium mb-4">Instructions</h3>
+      <p class="text-sm mt-2">
+        1. Combine chicken, soy sauce, and garlic in a large bowl. Mix well. Marinate the chicken for at least 1 hour. <br> <span class="opacity-80">• (2 lbs chicken, 4 tablespoons soy sauce)</span>
+      </p>
+      <p class="text-sm mt-2">
+        2. Heat a cooking pot. Pour cooking oil. <br> <span class="opacity-80">• (3 tablespoons cooking oil)</span>
+      </p>
+      <p class="text-sm mt-2">
+        3. When the oil is hot enough, pan-fry the marinated chicken for 2 minutes per side.
+      </p>
+      <p class="text-sm mt-2">
+        4. Pour-in the remaining marinade, including garlic. Add water. Bring to a boil <br> <span class="opacity-80">• (1 1/2 cups water)</span>
+      </p>
+      <p class="text-sm mt-2">
+        5. Add dried bay leaves and whole peppercorn. Simmer for 30 minutes or until the chicken gets tender <br> <span class="opacity-80">• (3 pieces dried bay leaves, 1 teaspoon whole peppercorn)</span>
+      </p>
+      <p class="text-sm mt-2">
+        6. Add vinegar. Stir and cook for 10 minutes. <br> <span class="opacity-80">• (6 tablespoons white vinegar)</span>
+      </p>
+      <p class="text-sm mt-2 my-10">
+        7. Put-in the sugar, and salt. Stir and turn the heat off. Serve hot. Share and Enjoy! <br> <span class="opacity-80">• (1 teaspoon sugar, 1/4 teaspoon salt)</span>
+      </p>
+    <button class="bg-[#C23E15] text-white px-4 py-2 rounded-full font-semibold hover:bg-[#c23d15f1]" onclick="closeModal('BistekModal')">Close</button>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center text-gray-700 text-sm py-6 mt-10">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="font-bold text-lg text-[#C23E15]">Contact Us</p>
+      <p>Email: support@kusinahub.com | Phone: +63 912 345 6789</p>
+      <div class="flex justify-center space-x-4 my-4">
+        <a href="#" class="hover:text-[#C23E15]">Facebook</a>
+        <a href="#" class="hover:text-[#C23E15]">Instagram</a>
+        <a href="#" class="hover:text-[#C23E15]">YouTube</a>
+      </div>
+      <p>&copy; 2025 KusinaHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
